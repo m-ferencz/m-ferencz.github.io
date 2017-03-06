@@ -10,5 +10,5 @@ markdown:     rdiscount
 permalink:    pretty
 pygments:     true
 paginate:     5
-comments: true
+excerpt_separator: '<!--more-->'
 
