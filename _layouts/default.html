@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  {% include head.html %}
+
+  <body>
+
+    <header class="masthead">
+      <div class="masthead-inner">
+        <h1>{{ site.title }}</h1>
+        <p class="lead">{{ site.description }}</p>
+
+        <div class="colophon">
+          <ul class="colophon-links">
+            <li>
+              <a href="https://www.linkedin.com/in/marcell-ferencz-9892a3a6/">LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://github.com/m-ferencz">GitHub</a>
+            </li>
+            <li>Marcell Ferencz</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="content container">
+		<ul>
+			{% for post in site.posts %}
+				<li>
+					<a href="{{ post.url }}">{{ post.title }}</a>
+					{{ post.excerpt }}
+				</li>
+			{% endfor %}
+		</ul>
+    </div>
+
+  </body>
+</html>

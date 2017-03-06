@@ -1,0 +1,14 @@
+title:        'Dipped in Data'
+tagline:      'Dip Me In Your Monday Data'
+description:  'A place to keep a log of my personal endeavours in data visualisation and statistical analysis.'
+url:          http://m-ferencz.github.io
+version:      1.0
+author:
+  name:       'Marcell Ferencz'
+  email:      'm.ferencz@outlook.com'
+markdown:     rdiscount
+permalink:    pretty
+pygments:     true
+paginate:     5
+comments: true
+excerpt_separator: <!--more-->
