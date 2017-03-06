@@ -9,11 +9,11 @@ Last week I saw a post on [r-bloggers](https://www.r-bloggers.com/), where someo
 
 <br>
 
-![visNetwork graph]({{ site.url }}/public/visgraph.png)
+
 
 #### Click [here](https://m-ferencz.github.io/spotify-visnetwork/) for the interactive plot!
 
-<br> <br>
+<br>
 
 Data prep
 ---------
