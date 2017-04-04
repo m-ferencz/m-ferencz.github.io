@@ -3,16 +3,17 @@ Introduction
 
 This week I decided to play with everyone's favourite probability phenomenon, the Birthday Problem. But, instead of sampling random numbers 1-365 to demonstrate the 'problem', I thought it would be more engaging (for me) to query some real world data, so I ended up using the birthdays of football players registered for the past 5 FIFA World Cups. This way I managed to tie in some web scraping into this mini-project, which is what I really wanted to practise.
 
+<!--more-->
 <br>
 
-Footnote: Turns out the BBC have already [done this](http://www.bbc.co.uk/news/magazine-27835311), which I hadn't realised until I was halfway through writing this, so I finished it regardless.
+Footnote: Turns out the BBC has already [done this](http://www.bbc.co.uk/news/magazine-27835311), which I hadn't realised until I was halfway through writing this, but I finished it regardless.
 
 <br> <br>
 
 Setting Up
 ----------
 
-For those not in the know, the [birthday problem](https://en.wikipedia.org/wiki/Birthday_problem) is the phenomenon that to be pretty certain that two people in a group share the same birthday (just the month and day, not the year), you need a surprisingly low number of people. To be 100% sure, of course, you would need 366 people; but having 70 people in your set will give you a 99.9% probability that two people will celebrate on the same day. This may seem counter-intuitive, but once you calculate the probability of *no* two people sharing a birthday, the numbers start making more sense (I recommend reading through the Wikipedia explanation if you're unfamiliar with the birthday problem).
+For those not in the know, the [birthday problem](https://en.wikipedia.org/wiki/Birthday_problem) is the phenomenon that to be pretty certain that two people in a group share the same birthday (just the month and day, not the year), you need a surprisingly low number of people. To be 100% sure, of course, you would need 366; but having 70 people in your set will give you a 99.9% probability that two people will celebrate on the same day. This may seem counter-intuitive, but once you calculate the probability of *no* two people sharing a birthday, the numbers start making more sense (I recommend reading through the Wikipedia explanation if you're unfamiliar with the birthday problem).
 
 <br>
 
@@ -27,26 +28,12 @@ Luckily for me, Wikipedia has [archived](https://en.wikipedia.org/wiki/Category:
 
 I created a quick function which would allow me to scrape all html tables from a webpage, format each to fit my needs - which is to only see the names, the dates of birth and the team number - and concatenate all the tables together.
 
+
+
 ``` r
 library(rvest)
-```
-
-    ## Loading required package: xml2
-
-``` r
 library(dplyr)
 ```
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
 
 ``` r
 # declare function to scrape wiki
@@ -169,4 +156,4 @@ probability
 
 <br>
 
-So the probability of getting 85 *or more* teams out of 152 given a probability of 50.73% is 11%. Not the highest, but considering it's higher than 5%, we'll take it. I also wouldn't argue against the mathematics of the Birthday Paradox.
+So the probability of getting 85 *or more* teams out of 152 given a probability of 50.73% is ~11.5%. Not the highest, but considering it's higher than 5%, we'll take it. I also wouldn't argue against the mathematics of the Birthday Paradox.
